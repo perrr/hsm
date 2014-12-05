@@ -1,17 +1,6 @@
 <?php
 
-$servername = "mysql.stud.ntnu.no";
-$username = "perod_hillsize";
-$password = "LKFa7JuW";
-$dbname = "perod_hsm";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-	die('Connection failed: '.$conn->connect_error);
-} 
+include('connection.php');
 
 $sql = 'SELECT id, first_name, last_name FROM athlete ORDER BY last_name ASC, first_name ASC';
 $result = $conn->query($sql);

@@ -1,17 +1,6 @@
 <?php
 
-$servername = "mysql.stud.ntnu.no";
-$username = "perod_hillsize";
-$password = "LKFa7JuW";
-$dbname = "perod_hsm";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-	die('Connection failed: '.$conn->connect_error);
-} 
+include('connection.php');
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 if (is_numeric($id)) {
