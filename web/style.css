@@ -1,0 +1,102 @@
+body {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-align: center;
+}
+
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: inherit;
+}
+
+input {
+	border-radius: 5px;
+	border: 1px solid gray;
+	font-family: inherit;
+	font-size: inherit;
+	color: gray;
+}
+
+table.stats-table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.bar {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+}
+
+td.l {
+	text-align: right;
+	font-weight: bold;
+	width: 200;
+}
+
+td.r {
+	color: gray;
+	width: 200;
+}
+
+div.center {
+	top: 0;
+	padding-top: 15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	font-size: large;
+	font-weight: bold;
+	position: fixed;
+	background-color: white;
+	z-index: 1;
+}
+
+div.bar {
+	float: left;
+	width: 250px;
+	display: inline-block;
+}
+
+div.container {
+	position: relative;
+	top: 50px;
+	z-index: 0;
+}
+
+input.invisible {
+	display: none;
+}
+
+form.search {
+	float: left;
+}
+
+:-ms-input-placeholder {
+	font-style: italic;
+}
+
+::-webkit-input-placeholder {
+	font-style: italic;
+}
+
+:-moz-placeholder {
+	font-style: italic;
+}
+
+::-moz-placeholder {
+	font-style: italic;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
