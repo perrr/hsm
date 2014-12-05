@@ -1,10 +1,3 @@
-<html>
-<head>
-<title>Hillsize Manager Statistics</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
 <?php
 
 $servername = "mysql.stud.ntnu.no";
@@ -55,6 +48,3 @@ else {
 	}
 }
 ?>
-
-</body>
-</html>

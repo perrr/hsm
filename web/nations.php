@@ -1,12 +1,3 @@
-<html>
-<head>
-<title>Hillsize Manager Statistics</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
-<h1>Nations</h1>
-
 <?php
 
 $servername = "mysql.stud.ntnu.no";
@@ -29,7 +20,3 @@ while($row = $result->fetch_assoc()) {
 	echo '<a href="index.php?element=nation.php&id='.$row['id'].'">'.$row['name'].'</a><br />';
 }
 ?>
-
-</body>
-</html>
-</html>
