@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <title>Hillsize Manager Statistics</title>
