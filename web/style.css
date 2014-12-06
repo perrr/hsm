@@ -54,12 +54,19 @@ div.center {
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1000px;
+	width: 1250px;
 	font-size: large;
 	font-weight: bold;
 	position: fixed;
 	background-color: white;
 	z-index: 1;
+}
+
+div.first-bar {
+	float: left;
+	width: 250px;
+	margin-top: 2px;
+	display: inline-block;
 }
 
 div.bar {

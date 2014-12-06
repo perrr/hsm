@@ -11,6 +11,7 @@
 <?php
 
 echo '<div class="center">
+<div class="first-bar"><a href="index.php?element=start.html">Hillsize Manager Statistics</a></div>
 <form action="index.php" method="get" class="search"><input type="hidden" name="element" value="athlete.php">
 <div class="bar"><a href="index.php?element=athletes.php">Athletes</a> <input type="text" name="id" size=15 placeholder=" ID or name"></div>
 <input type="submit" value="" class="invisible"></form>
