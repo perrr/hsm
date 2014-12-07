@@ -11,7 +11,7 @@
 <?php
 
 echo '<div class="center">
-<div class="first-bar"><a href="index.php?element=start.php">Hillsize Manager Statistics</a></div>
+<div class="first-bar"><a href="index.php">Hillsize Manager Statistics</a></div>
 <form action="index.php" method="get" class="search"><input type="hidden" name="element" value="athlete">
 <div class="bar"><a href="index.php?element=athletes">Athletes</a> <input type="text" name="id" size=15 placeholder=" ID or name"></div>
 <input type="submit" value="" class="invisible"></form>
@@ -26,7 +26,14 @@ echo '<div class="center">
 <input type="submit" value="" class="invisible"></form></div>';
 
 echo '<div class="container">';
-include($_GET['element'].'.php');
+
+if (isset($_GET['element'])) {
+    include($_GET['element'].'.php');
+}
+else {
+	include('start.php');
+}
+
 echo '</div>';
 ?>
 
