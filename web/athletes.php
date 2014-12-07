@@ -6,6 +6,6 @@ $sql = 'SELECT id, first_name, last_name FROM athlete ORDER BY last_name ASC, fi
 $result = $conn->query($sql);
 
 while($row = $result->fetch_assoc()) {
-	echo '<a href="index.php?element=athlete.php&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
+	echo '<a href="index.php?element=athlete&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
 }
 ?>

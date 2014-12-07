@@ -22,19 +22,19 @@ if (is_numeric($id)) {
 		if ($athletes->num_rows > 0) {
 			echo '<h2>Athletes</h1>';
 			while ($row = $athletes->fetch_assoc()) {
-				echo '<a href="index.php?element=athlete.php&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
+				echo '<a href="index.php?element=athlete&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
 			}
 		}
 		if ($clubs->num_rows > 0) {
 			echo '<h2>Clubs</h1>';
 			while ($row = $clubs->fetch_assoc()) {
-				echo '<a href="index.php?element=club.php&id='.$row['id'].'">'.$row['name'].'</a><br />';
+				echo '<a href="index.php?element=club&id='.$row['id'].'">'.$row['name'].'</a><br />';
 			}
 		}
 		if ($hills->num_rows > 0) {
 			echo '<h2>Hills</h1>';
 			while ($row = $hills->fetch_assoc()) {
-				echo '<a href="index.php?element=hill.php&id='.$row['id'].'">'.$row['name'].' (HS '.$row['hs'].')</a><br />';
+				echo '<a href="index.php?element=hill&id='.$row['id'].'">'.$row['name'].' (HS '.$row['hs'].')</a><br />';
 			}
 		}
 	}
@@ -49,7 +49,7 @@ else {
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			echo '<a href="index.php?element=nation.php&id='.$row['id'].'">'.$row['name'].'</a><br />';
+			echo '<a href="index.php?element=nation&id='.$row['id'].'">'.$row['name'].'</a><br />';
 		}
 	}
 	else {

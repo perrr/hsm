@@ -18,8 +18,8 @@ if (is_numeric($id)) {
 		echo '<h1>'.$rowA['first_name'].' '.$rowA['last_name'].'</h1>';
 		echo '<table class="stats-table"><tr><td class="l">ID</td><td class="r">'.$rowA['id'].'</td></tr>'
 		.'<tr><td class="l">Age</td><td class="r">'.$rowA['age'].'</td></tr>'
-		.'<tr><td class="l">Club</td><td class="r"><a href="index.php?element=club.php&id='.$rowA['club'].'">'.$rowC['name'].'</a></td></tr>'
-		.'<tr><td class="l">Nation</td><td class="r"><a href="index.php?element=nation.php&id='.$rowA['nation'].'">'.$rowN['name'].'</a></td></tr>'
+		.'<tr><td class="l">Club</td><td class="r"><a href="index.php?element=club&id='.$rowA['club'].'">'.$rowC['name'].'</a></td></tr>'
+		.'<tr><td class="l">Nation</td><td class="r"><a href="index.php?element=nation&id='.$rowA['nation'].'">'.$rowN['name'].'</a></td></tr>'
 		.'<tr><td class="l">Personal best</td><td class="r">'.$rowA['personal_best'].' m</td></tr><tr><td></td><td class="r">';
 		echo ($rowA['active'] == 1 ? 'Active' : 'Inactive').'</td></tr></table>';
 	}
@@ -35,7 +35,7 @@ else {
 
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			echo '<a href="index.php?element=athlete.php&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
+			echo '<a href="index.php?element=athlete&id='.$row['id'].'">'.$row['first_name'].' '.$row['last_name'].'</a><br />';
 		}
 	}
 	else {
