@@ -27,6 +27,53 @@ if (is_numeric($id)) {
 	else {
 		echo 'Athlete does not exist';
 	}
+	$sqlWC = 'SELECT competition, points, placement FROM competition_result WHERE athlete = '.$id;
+	$WC = $conn->query($sqlWC);
+	if ($WC->num_rows > 0) {
+	echo '<script type="text/javascript"
+	src="https://www.google.com/jsapi?autoload={
+	\'modules\':[{
+	\'name\':\'visualization\',
+	\'version\':\'1\',
+	\'packages\':[\'corechart\']
+	}]
+	}"></script>
+	<script type="text/javascript">
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+	var data = google.visualization.arrayToDataTable([';
+
+	echo '[\'Season\', \'Result\'],';
+	$first = 1;
+	while($rowWC = $WC->fetch_assoc()) {
+		$sqlSeason = 'SELECT season, world_cup FROM competition WHERE id = '.$rowWC['competition'];
+		$season = $conn->query($sqlSeason);
+		$rowS = $season->fetch_assoc();
+		if ($rowS['world_cup'] == 1) {
+			if ($first == 1) {
+				$first = 0;
+			}
+			else {
+				echo ',';
+			}
+			echo '[\'Season '.$rowS['season'].'\', '.$rowWC['placement'].']';
+		}
+	}
+	echo ']);
+	';
+
+	echo 'var options = {
+	title: \'World Cup Results\',
+	vAxis: { direction: -1 },
+	legend: { position: \'bottom\' }
+	};
+	var chart = new google.visualization.LineChart(document.getElementById(\'curve_chart\'));
+	chart.draw(data, options);
+	}
+	</script>';
+
+	echo '<div class="graph" id="curve_chart" style="width: 900px; height: 500px"></div>';
+	}
 }
 else {
 	echo '<h1>Search result</h1>';
